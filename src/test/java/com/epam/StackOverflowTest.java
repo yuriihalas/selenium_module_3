@@ -32,7 +32,7 @@ public class StackOverflowTest {
     }
 
     @Test(dataProvider = "userCredentials")
-    public void testLoginIntoAccount(User user, ProfileInfo profileInfo) {
+    public void testLoginAndEditingProfileInfo(User user, ProfileInfo profileInfo) {
         LogInBO logInBO = new LogInBO();
         logInBO.login(user);
         ProfileBO profileBO = new ProfileBO();

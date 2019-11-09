@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="GmailSuite" verbose="1">
-    <test name="SendMessageTest">
+<suite name="StackOverflow" verbose="1">
+    <test name="StackOverflowTest">
         <classes>
             <class name="com.epam.StackOverflowTest"/>
         </classes>
