@@ -29,6 +29,14 @@
                     <verbose>true</verbose>
                     <Xlint>ignore</Xlint>
                     <encoding>UTF-8</encoding>
+                    <sources>
+                        <source>
+                            <basedir>src/main/java</basedir>
+                            <includes>
+                                <include>**/*.aj</include>
+                            </includes>
+                        </source>
+                    </sources>
                 </configuration>
                 <executions>
                     <execution>
