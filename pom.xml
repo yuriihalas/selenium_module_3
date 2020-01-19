@@ -20,7 +20,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>aspectj-maven-plugin</artifactId>
-                <version>1.4</version>
+                <version>1.7</version>
                 <configuration>
                     <complianceLevel>1.8</complianceLevel>
                     <source>1.8</source>
@@ -52,7 +52,7 @@
                     <dependency>
                         <groupId>org.aspectj</groupId>
                         <artifactId>aspectjtools</artifactId>
-                        <version>1.8.2</version>
+                        <version>1.8.4</version>
                     </dependency>
                 </dependencies>
             </plugin>
@@ -103,7 +103,7 @@
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
-            <version>1.8.2</version>
+            <version>1.8.4</version>
         </dependency>
     </dependencies>
 </project>
