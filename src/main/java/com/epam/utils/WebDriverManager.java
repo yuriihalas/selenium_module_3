@@ -17,7 +17,6 @@ public class WebDriverManager {
     }
 
     private WebDriverManager() {
-
     }
 
     public static WebDriver getDriver() {
