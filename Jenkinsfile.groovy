@@ -20,10 +20,9 @@ pipeline {
                 echo "${params.NICK}"
             }
         }
-        post {
-            always {
-                echo "Build is FINISHED"
-            }
+    } post {
+        always {
+            echo "Build is FINISHED"
         }
     }
 }
