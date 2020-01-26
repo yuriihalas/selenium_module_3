@@ -29,7 +29,8 @@ pipeline {
         }
         stage('Testing') {
             steps {
-                sh "mvn test -Dnick=${params.NICKNAME}"
+                sh "mvn test -Dnick=${params.NICKNAME} -Demail=${params.EMAIL} -Dpass=${params.PASSWORD}" +
+                        " -Dtitle=${params.TITLE} -Dlocation=${params.LOCATION} -Dabout=${params.ABOUT_ME_INFO}"
             }
         }
     }

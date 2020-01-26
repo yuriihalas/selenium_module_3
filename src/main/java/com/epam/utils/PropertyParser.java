@@ -15,10 +15,7 @@ public class PropertyParser {
 
     public static String getPropertyOrDefault(String key) {
         String valueProperty = System.getProperty(key);
-        if (Objects.isNull(valueProperty)) {
-            return defaultProperties.get(key);
-        }
-        return valueProperty;
+        return Objects.isNull(valueProperty) || valueProperty.isEmpty() ? defaultProperties.get(key) : valueProperty;
     }
 
 
