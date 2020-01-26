@@ -5,14 +5,20 @@ pipeline {
     }
     stages {
         stage('Cleaning') {
-            mvn clean
+            steps {
+                mvn clean
+            }
         }
         stage('Compile') {
-            git url: 'https://github.com/yuriihalas/selenium_module_3.git'
-            echo "helloToAll"
+            steps {
+                git url: 'https://github.com/yuriihalas/selenium_module_3.git'
+                echo "helloToAll"
+            }
         }
         stage('Tests') {
-            echo "${params.NICK}"
+            steps {
+                echo "${params.NICK}"
+            }
         }
         post {
             always {
