@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Cleaning') {
             steps {
-                mvn clean
+                echo "Cleaning"
             }
         }
         stage('Compile') {
@@ -20,7 +20,8 @@ pipeline {
                 echo "${params.NICK}"
             }
         }
-    } post {
+    }
+    post {
         always {
             echo "Build is FINISHED"
         }
