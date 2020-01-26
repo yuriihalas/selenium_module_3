@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    initialise {
+    options {
         git url: 'https://github.com/yuriihalas/selenium_module_3.git'
     }
     parameters {
