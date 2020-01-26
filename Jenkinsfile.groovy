@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    options {
-        git url: 'https://github.com/yuriihalas/selenium_module_3.git'
-    }
     parameters {
         string(name: 'NICKNAME', description: 'Nickname of your stackOverflow account')
         string(name: 'EMAIL', description: 'Email of your stackOverflow account')
@@ -12,17 +9,20 @@ pipeline {
         string(name: 'ABOUT_ME_INFO', description: 'Set about me info of your stackOverflow account')
     }
     stages {
+        stage('Initialising') {
+            git url: 'https://github.com/yuriihalas/selenium_module_3.git'
+        }
         stage('Cleaning') {
             steps {
                 sh "mvn clean"
             }
         }
-        stage('Compile') {
+        stage('Compiling') {
             steps {
                 sh "mvn compile"
             }
         }
-        stage('Tests') {
+        stage('Testing') {
             steps {
                 sh "nvn test -Dnick=${params.NICKNAME}"
             }
