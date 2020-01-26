@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        maven 'apache-maven-3.6.3'
+    }
     parameters {
         string(name: 'NICKNAME', description: 'Nickname of your stackOverflow account')
         string(name: 'EMAIL', description: 'Email of your stackOverflow account')
