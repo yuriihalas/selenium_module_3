@@ -10,7 +10,9 @@ pipeline {
     }
     stages {
         stage('Initialising') {
-            git url: 'https://github.com/yuriihalas/selenium_module_3.git'
+            steps {
+                git url: 'https://github.com/yuriihalas/selenium_module_3.git'
+            }
         }
         stage('Cleaning') {
             steps {
