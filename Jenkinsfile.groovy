@@ -19,17 +19,17 @@ pipeline {
         }
         stage('Cleaning') {
             steps {
-                sh "mvn clean"
+                mvn clean
             }
         }
         stage('Compiling') {
             steps {
-                sh "mvn compile"
+                mvn compile
             }
         }
         stage('Testing') {
             steps {
-                sh "nvn test -Dnick=${params.NICKNAME}"
+                nvn "test -Dnick=${params.NICKNAME}"
             }
         }
     }
