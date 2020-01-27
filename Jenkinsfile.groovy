@@ -3,6 +3,9 @@ pipeline {
     tools {
         maven 'apache-maven-3.6.3'
     }
+    triggers {
+        pollSCM('') //Empty quotes tells it to build on a push
+    }
     parameters {
         string(name: 'NICKNAME', description: 'Nickname of your stackOverflow account')
         string(name: 'EMAIL', description: 'Email of your stackOverflow account')
