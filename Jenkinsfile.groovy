@@ -7,12 +7,12 @@ pipeline {
         pollSCM('') //Empty quotes tells it to build on a push
     }
     parameters {
-        string(name: 'NICKNAME', description: 'Nickname of your stackOverflow account')
-        string(name: 'EMAIL', description: 'Email of your stackOverflow account')
-        string(name: 'PASSWORD', description: 'Password of your stackOverflow account')
-        string(name: 'TITLE', description: 'Set title of your stackOverflow account')
-        string(name: 'LOCATION', description: 'Set location of your stackOverflow account')
-        string(name: 'ABOUT_ME_INFO', description: 'Set about me info of your stackOverflow account')
+        string(name: 'NICKNAME', description: 'Nickname of your stackOverflow account', defaultValue: "")
+        string(name: 'EMAIL', description: 'Email of your stackOverflow account', defaultValue: "")
+        string(name: 'PASSWORD', description: 'Password of your stackOverflow account', defaultValue: "")
+        string(name: 'TITLE', description: 'Set title of your stackOverflow account', defaultValue: "")
+        string(name: 'LOCATION', description: 'Set location of your stackOverflow account', defaultValue: "")
+        string(name: 'ABOUT_ME_INFO', description: 'Set about me info of your stackOverflow account', defaultValue: "")
     }
     stages {
         stage('Initialising') {
