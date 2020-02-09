@@ -13,7 +13,6 @@ import org.testng.annotations.Test;
 import static com.epam.utils.PropertyParser.getPropertyOrDefault;
 
 public class StackOverflowTest {
-    
     private static final String BASE_PAGE_STACK_OVERFLOW = "https://stackoverflow.com";
 
     @DataProvider
